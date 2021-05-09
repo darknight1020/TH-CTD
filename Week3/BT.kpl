@@ -1,0 +1,24 @@
+PROGRAM BT;
+VAR arr: ARRAY(.10.) OF INTEGER;
+    i : INTEGER;
+    j : INTEGER;
+    min: INTEGER;
+    diff: INTEGER;
+
+BEGIN
+    FOR i := 0 TO 9 DO
+        arr(.i.) := READI;
+    CALL WRITELN;    
+    min := arr(.0.);
+    FOR i := 1 TO 9 DO
+        IF min > arr(.i.) THEN min := arr(.i.);
+    CALL WRITEI(min);
+    CALL WRITELN;
+    diff := 1;
+    FOR i := 0 TO 9 DO
+        FOR j :=0 TO i DO
+            IF arr(.i.) = arr(.j.) THEN diff :=0;
+    
+    CALL WRITEI(diff);
+    CALL WRITELN;
+END.
